@@ -25,7 +25,7 @@ class FullScreenApp(object):
         height=master.winfo_screenheight()-self.padding
         master.geometry(self.dimensions.format(width, height))
 
-        b = tk.Button(self.master, text="Press me!", command=lambda: self.pressed())
+        b = tk.Button(self.master, text="Update", command=lambda: self.pressed())
         b.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
         
         T = tk.Text(self.master, height=2, width=30)
@@ -34,7 +34,7 @@ class FullScreenApp(object):
         T.insert(tk.END, eth0_ip)
 
     def pressed(self):
-        print("clicked!")
+        print("Updated")
 
 root=tk.Tk()
 root.wm_attributes('-fullscreen','false')
